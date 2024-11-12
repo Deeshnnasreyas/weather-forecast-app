@@ -36,8 +36,8 @@ const App = () => {
     <div
       className={`mx-auto max-w-screen-lg mt-4 py-5 px-32 bg-gradient-to-br shadow-xl shadow-gray-400 from-blue-100 to-blue-700`}
     >
-      <TopButtons setQuery={setQuery} />
       <Inputs setQuery={setQuery} setUnits={setUnits} />
+      <TopButtons setQuery={setQuery} />
 
       {weather && (
         <>

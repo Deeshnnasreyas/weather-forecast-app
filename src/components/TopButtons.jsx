@@ -4,11 +4,11 @@ const TopButtons = ({ setQuery }) => {
   const cities = [
     {
       id: 1,
-      name: "London",
+      name: "Paris",
     },
     {
       id: 2,
-      name: "Sydney",
+      name: "Toronto",
     },
     {
       id: 3,
@@ -16,11 +16,11 @@ const TopButtons = ({ setQuery }) => {
     },
     {
       id: 4,
-      name: "Paris",
+      name: "London",
     },
     {
       id: 5,
-      name: "Toronto",
+      name: "Sydney",
     },
   ];
 
@@ -29,7 +29,7 @@ const TopButtons = ({ setQuery }) => {
       {cities.map((city) => (
         <button
           key={city.id}
-          className="text-lg font-medium hover:bg-gray-700/20 px-3 py-2 rounded-md transition ease-in"
+          className="text-lg font-medium hover:bg-orange-500  hover:scale-95 px-3 py-2 bg-yellow-500 transition ease-in rounded-lg"
           onClick={() => setQuery({ q: city.name })}
         >
           {city.name}
