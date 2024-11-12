@@ -8,6 +8,7 @@ import getFormattedWeatherData from "./services/weatherService";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import WeatherGraph from "./components/WeatherGraph";
 
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
@@ -34,7 +35,7 @@ const App = () => {
 
   return (
     <div
-      className={`mx-auto max-w-screen-lg mt-4 py-5 px-32 bg-gradient-to-br shadow-xl shadow-gray-400 from-blue-100 to-blue-700`}
+      className={`mx-auto max-w-screen-lg mt-4 py-5 px-32 bg-gradient-to-br shadow-xl shadow-gray-400 from-blue-300 to-blue-700`}
     >
       <Inputs setQuery={setQuery} setUnits={setUnits} />
       <TopButtons setQuery={setQuery} />
@@ -43,6 +44,7 @@ const App = () => {
         <>
           <TimeAndLocation weather={weather} />
           <TempAndDetails weather={weather} units={units} />
+          <WeatherGraph weather={weather} units={units} />
           <Forecast title="3 hour step forecast" data={weather.hourly} />
           <Forecast title="daily forecast" data={weather.daily} />
         </>
